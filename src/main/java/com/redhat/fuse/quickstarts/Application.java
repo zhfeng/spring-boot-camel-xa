@@ -33,9 +33,6 @@ public class Application {
     @Bean(name = "jms-component")
     public JmsComponent jmsComponent(ConnectionFactory xaJmsConnectionFactory, PlatformTransactionManager jtaTransactionManager) {
 	    JmsComponent jms = new JmsComponent();
-	    jms.setConnectionFactory(xaJmsConnectionFactory);
-	    jms.setTransactionManager(jtaTransactionManager);
-	    jms.setTransacted(true);
 
 	    return jms;
     }
